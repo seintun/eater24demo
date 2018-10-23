@@ -11,6 +11,10 @@ body {
     color: orange;
 }
 
+#user-alert {
+    display: none;
+}
+
 div.smoked-caption {
     color: black;
     background-color: white;

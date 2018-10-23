@@ -23,12 +23,12 @@
                     <!-- username -->
                     <div required class="form-row mr-2">
                         <label class="col-sm-3 my-1" for="username"></label>
-                        <input required type="text" class="form-control" id="username" placeholder="Username">
+                        <input required type="text" class="form-control" id="userIdLogin" placeholder="Username">
                     </div>
                     <!-- password -->
                     <div required class="form-row m2-1">
                         <label class="col-sm-3 my-1" for="password"></label>
-                        <input required type="password" class="form-control" id="password" placeholder="Password">
+                        <input required type="password" class="form-control" id="passwordLogin" placeholder="Password">
                     </div>
                     <!-- Login button -->
                     <div class="row m-1">
@@ -41,31 +41,31 @@
                 </div>
                 <!--## Registration Form -->
                 <div id="registerForm">
-                <form onsubmit="" class="form-inline">
+                <form onsubmit="registerUser(event)" class="form-inline">
                     <!-- name -->
                     <div required class="form-row mr-2">
                         <label class="col-sm-3 my-1" for="firstname"></label>
-                        <input required type="text" class="form-control" id="firstname" placeholder="Name">
+                        <input required type="text" class="form-control" id="firstName" placeholder="Name">
                     </div>
                     <!-- Email -->
                     <div required class="form-row mr-2">
                         <label class="col-sm-3 my-1" for="email"></label>
                         <input required type="email" class="form-control" id="email" placeholder="Email">
                     </div>
-                    <!-- username -->
+                    <!-- userId -->
                     <div required class="form-row mr-2">
                         <label class="col-sm-3 my-1" for="username"></label>
-                        <input required type="text" class="form-control" id="username" placeholder="Username">
+                        <input required type="text" class="form-control" id="userIdRegister" placeholder="User ID">
                     </div>
                     <!-- password -->
-                    <div required class="form-row m2-1">
+                    <div required class="form-row D2-1">
                         <label class="col-sm-3 my-1" for="password"></label>
-                        <input required type="password" class="form-control" id="password" placeholder="Password">
+                        <input required type="password" class="form-control" id="passwordRegister" placeholder="Password">
                     </div>
                     <!-- Register button -->
                     <div required class="row m-1">
                         <!-- Register button -->
-                        <input type="submit" class="btn btn-default mt-2" value="Sign in">
+                        <input type="submit" class="btn btn-default mt-2" value="Register">
                         <!-- Will toggle Register/Login Form -->
                         <span onclick="toggleLogin()" class="notRegistered m-3">I have account</span>
                     </div>
@@ -83,7 +83,9 @@
         </nav>
     </div>
     <!--### Navbar -->
-
+    <div class="alert alert-info" id="user-alert">
+        You have succesfully become a member!
+    </div>
     <!--### Carousel -->
     <div id="carouselRestaurants" class="carousel slide">
         <div id="restaurants-list" class="carousel-inner" role="listbox">

@@ -2,10 +2,9 @@ var eater24API = "http://eater24.herokuapp.com"
 
 function validateUser(event) {
     event.preventDefault();
-    let userName = document.querySelector('#username').value
-    let password = document.querySelector('#password').value
+    let userName = document.querySelector('#userIdLogin').value
+    let password = document.querySelector('#passwordLogin').value
     console.log(userName, 'outside of axios')
-    // alert(`Your username is ${userName} password is ${password}`)
     axios.post(`${eater24API}/users/login`, {userName, password})
         .then(result =>{
             console.log(result, 'inside axios')
@@ -18,6 +17,32 @@ function validateUser(event) {
         //     "userId":   userName,
         //     "password": password
 }
+
+const registerUser = (event) => {
+    event.preventDefault();
+    // Retrieve value from textfields
+    const userName = document.getElementById('firstName')
+    const userId = document.getElementById('userIdRegister')
+    const password = document.getElementById('passwordRegister')
+    const email = document.getElementById('email')
+    // send data back to the backend's database
+    axios.post(`${eater24API}/users`,
+        { 
+            "name":     firstName.value,
+            "userId":   userIdRegister.value, 
+            "password": passwordRegister.value, 
+            "email":    email.value
+        })
+        .then(results =>{
+            document.getElementById('user-alert').style.display = 'block'
+            firstName.value = ""
+            userIdRegister.value = ""
+            passwordRegister.value = ""
+            email.value = ""
+            return results
+        })
+}
+// document.getElementById('newSubmit').addEventListener('click', newSignUp)
 
 function toggleRegister() {
     let registerForm = document.querySelector("#registerForm");
