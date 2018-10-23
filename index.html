@@ -13,20 +13,10 @@
   </head>
   <body>
     <h1>Eater24</h1>
-    <div id="test-list">
-      
-    </div>
-    <div id="carouselRestaurants" class="carousel slide" data-ride="carousel">
 
+    <div id="carouselRestaurants" class="carousel slide">
         <div id="restaurants-list" class="carousel-inner" role="listbox">
-            <!-- First carousel -->
-            <!-- <div class="carousel-item active">
-            <img class="d-block w-100" src="https://source.unsplash.com/800x800" alt="First slide">
-                <div class="carousel-caption smoked-caption">
-                    <h5 class="h5-responsive">Gary Danko</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero expedita magni ea reprehenderit sapiente aliquam. Inventore, quod, consequuntur ea earum fugit a doloribus optio necessitatibus quae possimus eos qui beatae?</p>
-                </div>
-            </div> -->
+            <!-- CAROUSEL PLACEHOLDER -->
         </div>
         
         <!-- Left Right Navigation Arrow -->
@@ -48,12 +38,19 @@
           <li data-target="#carouselRestaurants" data-slide-to="1"></li>
           <li data-target="#carouselRestaurants" data-slide-to="2"></li>
         </ol> -->
+    <button onclick="displayItems()" id="getItems" type="button" class="btn btn-primary">Get Menu Items</button>
+    <div id="showItems">
+
+    </div>
 
     <!-- My JavaScript -->
     <!-- <script src="./main.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
     <script src="./renders/carousel.render.js"></script>
     <script src="./templates/carousel.template.js"></script>
+    <script src="./renders/items.render.js"></script>
+    <script src="./templates/items.template.js"></script>
+   
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

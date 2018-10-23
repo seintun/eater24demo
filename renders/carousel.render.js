@@ -6,6 +6,7 @@ const displayRestaurants = () => {
     axios.get(`${eater24API}/restaurants`)
         .then( result => {
             document.getElementById('restaurants-list').innerHTML = templateRestaurants(result.data);
+            pickId();
         }).catch(err => {
             return 'error in retrieving restaurants data'
         }) 
