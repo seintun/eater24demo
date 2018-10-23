@@ -12,7 +12,6 @@ const displayItems = () => {
 }
 
 const pickId = () => {
-    console.log('inside pickId')
     document.querySelector(".carousel-caption")
             .addEventListener("click",function(e) {
                 // e.target is our targetted element

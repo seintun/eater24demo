@@ -12,7 +12,7 @@ const templateItem = (item) => {
             <div class="col-3 m-1">
                 <img src="https://source.unsplash.com/200x20${item.id}/?food" alt="">
             </div>
-            <div class="col-8 float-right">
+            <div class="item-info col-8 ml-1 float-right">
                 <li id= "${item.id}" class="list-group-item m-1">
                     <h4>${item.name}</h4>
                     <small>${item.descriptions}</small>

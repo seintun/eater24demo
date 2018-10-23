@@ -12,8 +12,36 @@
     <title>Hello, world!</title>
   </head>
   <body>
-    <h1>Eater24</h1>
-
+    <!-- Navbar -->
+    <div class="pos-f-t">
+        <div class="collapse" id="navbarToggle">
+            <div id="login-div" class="bg-dark p-2">
+                <form onsubmit="validateUser(event)" class="form-inline">
+                    <div class="form-row mr-2">
+                        <label class="col-sm-3 my-1" for="username"></label>
+                        <input required type="text" class="form-control" id="username" placeholder="Username">
+                    </div>
+                    <div class="form-row m2-1">
+                        <label class="col-sm-3 my-1" for="password"></label>
+                        <input required type="password" class="form-control" id="password" placeholder="Password">
+                    </div>
+                    <div class="row m-1">
+                        <input type="submit" class="btn btn-default mt-2" value="Sign in">
+                        <a href="" class="m-2">Not Registered?</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <nav class="navbar navbar-dark bg-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <span id="welcome-name" class="text-white">
+                Eater 24
+            </span>
+        </nav>
+    </div>
+    <!-- Navbar -->
     <div id="carouselRestaurants" class="carousel slide">
         <div id="restaurants-list" class="carousel-inner" role="listbox">
             <!-- CAROUSEL PLACEHOLDER -->
@@ -48,11 +76,12 @@
     <!-- My JavaScript -->
     <!-- <script src="./main.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+    <script src="./main.js"></script>
     <script src="./renders/carousel.render.js"></script>
     <script src="./templates/carousel.template.js"></script>
     <script src="./renders/items.render.js"></script>
     <script src="./templates/items.template.js"></script>
-   
+    <script src="./renders/logins.render.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

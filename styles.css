@@ -1,6 +1,7 @@
 body {
-    background-image: url("./images/sayagata-400px.png");
+    background-image: url("./images/bg-img.png");
 }
+
 
 div.smoked-caption {
     color: black;
@@ -12,10 +13,13 @@ div.smoked-caption {
     transform:  scale(1.5);
     color:      blueviolet;
 }
-
+.item-info {
+    font-size: 0.75rem;
+    opacity: 0.75;
+}
 .carousel-control-next-icon
 {
-  background-color: black;
+    background-color: black;
 }
 
 .carousel-control-prev-icon{
