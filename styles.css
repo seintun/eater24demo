@@ -1,3 +1,7 @@
+body {
+    background-image: url("./images/sayagata-400px.png");
+}
+
 div.smoked-caption {
     color: black;
     background-color: white;
@@ -8,3 +12,19 @@ div.smoked-caption {
     transform:  scale(1.5);
     color:      blueviolet;
 }
+
+.carousel-control-next-icon
+{
+  background-color: black;
+}
+
+.carousel-control-prev-icon{
+    background-color: black;
+}
+
+@media screen and (max-height: 1000px) {
+    #carouselRestaurants {
+    height: 300px;
+    width:  300px;
+    margin: auto;
+}}
