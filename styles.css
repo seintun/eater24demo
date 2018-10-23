@@ -1,7 +1,15 @@
 body {
     background-image: url("./images/bg-img.png");
 }
-
+#registerForm {
+    display: none;
+}
+.notRegistered {
+    color: white;
+}
+.notRegistered:hover {
+    color: orange;
+}
 
 div.smoked-caption {
     color: black;

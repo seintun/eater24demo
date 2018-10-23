@@ -18,3 +18,27 @@ function validateUser(event) {
         //     "userId":   userName,
         //     "password": password
 }
+
+function toggleRegister() {
+    let registerForm = document.querySelector("#registerForm");
+    let loginForm = document.querySelector("#loginForm");
+
+    if (registerForm.style.display === "none") {
+        registerForm.style.display = "block";
+        loginForm.style.display = "none";
+    } else {
+        registerForm.style.display = "none";
+    }
+}
+
+function toggleLogin() {
+    let registerForm = document.querySelector("#registerForm");
+    let loginForm = document.querySelector("#loginForm");
+
+    if (registerForm.style.display === "block") {
+        registerForm.style.display = "none";
+        loginForm.style.display = "block";
+    } else {
+        registerForm.style.display = "block";
+    }
+}

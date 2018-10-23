@@ -12,24 +12,65 @@
     <title>Hello, world!</title>
   </head>
   <body>
-    <!-- Navbar -->
+    <!--### Navbar -->
     <div class="pos-f-t">
         <div class="collapse" id="navbarToggle">
             <div id="login-div" class="bg-dark p-2">
+
+                <!--## Login Form -->
+                <div id="loginForm">
                 <form onsubmit="validateUser(event)" class="form-inline">
-                    <div class="form-row mr-2">
+                    <!-- username -->
+                    <div required class="form-row mr-2">
                         <label class="col-sm-3 my-1" for="username"></label>
                         <input required type="text" class="form-control" id="username" placeholder="Username">
                     </div>
-                    <div class="form-row m2-1">
+                    <!-- password -->
+                    <div required class="form-row m2-1">
                         <label class="col-sm-3 my-1" for="password"></label>
                         <input required type="password" class="form-control" id="password" placeholder="Password">
                     </div>
+                    <!-- Login button -->
                     <div class="row m-1">
+                        <!-- Login button -->
                         <input type="submit" class="btn btn-default mt-2" value="Sign in">
-                        <a href="" class="m-2">Not Registered?</a>
+                        <!-- Will toggle Register/Login Form -->
+                        <span onclick="toggleRegister()" class="notRegistered m-3">Not Registered?</span>
                     </div>
                 </form>
+                </div>
+                <!--## Registration Form -->
+                <div id="registerForm">
+                <form onsubmit="" class="form-inline">
+                    <!-- name -->
+                    <div required class="form-row mr-2">
+                        <label class="col-sm-3 my-1" for="firstname"></label>
+                        <input required type="text" class="form-control" id="firstname" placeholder="Name">
+                    </div>
+                    <!-- Email -->
+                    <div required class="form-row mr-2">
+                        <label class="col-sm-3 my-1" for="email"></label>
+                        <input required type="email" class="form-control" id="email" placeholder="Email">
+                    </div>
+                    <!-- username -->
+                    <div required class="form-row mr-2">
+                        <label class="col-sm-3 my-1" for="username"></label>
+                        <input required type="text" class="form-control" id="username" placeholder="Username">
+                    </div>
+                    <!-- password -->
+                    <div required class="form-row m2-1">
+                        <label class="col-sm-3 my-1" for="password"></label>
+                        <input required type="password" class="form-control" id="password" placeholder="Password">
+                    </div>
+                    <!-- Register button -->
+                    <div required class="row m-1">
+                        <!-- Register button -->
+                        <input type="submit" class="btn btn-default mt-2" value="Sign in">
+                        <!-- Will toggle Register/Login Form -->
+                        <span onclick="toggleLogin()" class="notRegistered m-3">I have account</span>
+                    </div>
+                </form>
+                </div>
             </div>
         </div>
         <nav class="navbar navbar-dark bg-dark">
@@ -41,10 +82,12 @@
             </span>
         </nav>
     </div>
-    <!-- Navbar -->
+    <!--### Navbar -->
+
+    <!--### Carousel -->
     <div id="carouselRestaurants" class="carousel slide">
         <div id="restaurants-list" class="carousel-inner" role="listbox">
-            <!-- CAROUSEL PLACEHOLDER -->
+            <!--## CAROUSEL PLACEHOLDER -->
         </div>
         
         <!-- Left Right Navigation Arrow -->
@@ -69,10 +112,14 @@
     <div style="text-align:center;">  
         <button onclick="displayItems()" id="getItems" type="button" class="btn btn-primary">Get Menu Items</button>
     </div>
+    <!--### Carousel -->
+
+    <!--### Show Menu Items -->
     <div id="showItems">
 
     </div>
-
+    <!--### Show Menu Items -->
+    
     <!-- My JavaScript -->
     <!-- <script src="./main.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
