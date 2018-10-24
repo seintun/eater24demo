@@ -45,7 +45,7 @@ const displayTemplateSettings = () => {
                 <input type="text" class="form-control" id="nameInput" value="${userName}">
             </div>              
             <div class="form-group">
-                <label for="nameInput">Name</label>
+                <label for="nameInput">User ID</label>
                 <input type="text" class="form-control" id="userIdInput" value="${userId}">
             </div>    
             <div class="form-group">

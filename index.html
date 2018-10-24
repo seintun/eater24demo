@@ -24,7 +24,27 @@
                 <p>Welcome 
                     <span id="name-dashboard"></span>
                 </p>
-                <li>
+                <li id="loginBar" class="active">
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Login</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a href="#">
+                               <form onsubmit="validateUser(event)" class="form-inline">
+                                    <div class="form-group">
+                                        <label class="sr-only" for="username">Username</label>
+                                        <input required type="text" class="form-control" id="userIdLogin" placeholder="Username">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="sr-only" for="password">Password</label>
+                                        <input required type="password" class="form-control" id="passwordLogin" placeholder="Password">
+                                    </div>
+                                    <input type="submit" class="btn btn-default" value="Sign in">
+                                </form> 
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li id="dashboardBar">
                     <a href="./dashboard.html">Dashboard</a>
                 </li>
                 <li>
@@ -85,6 +105,8 @@
     <script src="./renders/items.render.js"></script>
     <script src="./templates/items.template.js"></script>
     <script src="./renders/logins.render.js"></script>
+    <script src="./renders/dashboard.render.js"></script>
+    <script src="./templates/dashboard.template.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

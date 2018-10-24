@@ -8,14 +8,14 @@ const displayOrders = () => {
     }
     axios.post(`${eater24API}/orders`, userId)
         .then( result => {
-            document.querySelector('#orderLists').innerHTML = templateOrders(result.data);
+            document.querySelector('#dashboard-display').innerHTML = templateOrders(result.data);
         }).catch(err => {
             return 'error in retrieving your previous orders'
         }) 
 }
 
 const displaySettings = () => {
-    document.querySelector('#setting-container').innerHTML = displayTemplateSettings();
+    document.querySelector('#dashboard-display').innerHTML = displayTemplateSettings();
 }
 
 const sendUserInfoUpdate = () => {
