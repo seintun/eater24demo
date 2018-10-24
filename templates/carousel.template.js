@@ -12,15 +12,17 @@ const templateRestaurant = (restaurant, idx) => {
     let phLink = 'tel:1-' + str.substr(0,3) + '-)' + str.substr(3,3) + '-' + str.substr(6);
     return `
             <div onclick="displayItems(${restaurant.id})" class="carousel-item ${idx === 0 ? 'active': ''}">
-            <img class="d-block w-100" src="https://source.unsplash.com/800x${+restaurant.id+800}/?food">
+            <img class="d-block w-100" src="https://source.unsplash.com/900x${+restaurant.id+900}/?food">
                 <div class="carousel-caption smoked-caption">
                     <li id= "${restaurant.id}" class="list-group-item restaurant-list">
-                        <h4 class="h4-responsive">
+                        <h5 class="h5-responsive">
                             ${restaurant.name}
-                        </h4>
-                        <p>
-                            (${restaurant.cuisine})
-                        </p>
+                        </h5>
+                        <small>
+                            (${restaurant.cuisine})</br>
+                            ${restaurant.address}
+                            <a href="${phLink}">${formattedPh}</a> 
+                        </small>
                     </li>
                 </div>
             </div>

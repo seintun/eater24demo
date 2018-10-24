@@ -24,9 +24,37 @@
                 <p>Welcome 
                     <span id="name-dashboard"></span>
                 </p>
+                <li id="registerBar" class="active">
+                    <a href="#registerToggle" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Register</a>
+                    <ul class="collapse list-unstyled" id="registerToggle">
+                        <li>
+                            <a href="#register">
+                                <form onsubmit="registerUser(event)" class="form-inline">
+                                    <div class="form-group">
+                                        <label class="sr-only" for="Name">Name</label>
+                                        <input required type="text" class="form-control" id="userNameRegister" placeholder="Name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="sr-only" for="userId">User ID</label>
+                                        <input required type="text" class="form-control" id="userIdRegister" placeholder="User ID">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="sr-only" for="password">Password</label>
+                                        <input required type="password" class="form-control" id="passwordRegister" placeholder="Password">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="sr-only" for="email">User ID</label>
+                                        <input required type="email" class="form-control" id="emailRegister" placeholder="Email Address">
+                                    </div>                                    
+                                    <input type="submit" class="btn btn-default" value="Register">
+                                </form> 
+                            </a>
+                        </li>
+                    </ul>
+                </li>
                 <li id="loginBar" class="active">
-                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Login</a>
-                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                    <a href="#loginToggle" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Login</a>
+                    <ul class="collapse list-unstyled" id="loginToggle">
                         <li>
                             <a href="#">
                                <form onsubmit="validateUser(event)" class="form-inline">
@@ -50,6 +78,9 @@
                 <li>
                     <a href="mailto:support@eater24.com">Email Us</a>
                 </li>
+                <li id="signoutBar">
+                    <a onclick="clearData()" href="./index.html">Sign Out</a>
+                </li>
             </ul>
         </nav>
         
@@ -60,8 +91,7 @@
                     <button type="button" id="sidebarCollapse" class="btn btn-info">
                         <i class="fas fa-align-left"></i>
                     </button>
-                    <button> INSERT LOGO HERE!</button>
-                    
+                    <em> "Why wait? Order ahead!"</em>
                 </div>
             </nav>
         <!--### Navbar -->
