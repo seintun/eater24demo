@@ -16,20 +16,22 @@
         <!-- Sidebar -->
         <nav id="sidebar">
             <div class="sidebar-header">
-                <h3>Eater 24 Sidebar</h3>
+                <a href="./index.html">
+                    <h4>Eater 24</h4>
+                </a>
             </div>
             <ul class="list-unstyled components">
                 <p>Welcome 
                     <span id="name-dashboard"></span>
                 </p>
                 <li>
-                    <a href="./dashboard.html">Order History</a>
+                    <a onclick="displayOrders()">Order History</a>
                 </li>
                 <li>
-                    <a href="./index.html">Settings</a>
+                    <a onclick="displaySettings()">Settings</a>
                 </li>
                 <li>
-                    <a href="#">Contact Us</a>
+                    <a href="mailto:support@eater24.com">Email Us</a>
                 </li>
             </ul>
         </nav>
@@ -46,14 +48,17 @@
                 </div>
             </nav>
             <!-- Display Block -->
-            <div id="order-container" class="container">
+            <div id="dashboard-container" class="container">
                 <!-- Order Container -->
-                <button onclick="displayOrders()" class="btn btn-primary">Previous Orders</button>
-                <h4>Order History</h4>
                 <div id="orderLists" class="container">
                     <!-- Display list of past orders -->
                 </div>
             </div>
+                <!-- Setting Container -->
+                <div id="setting-container" class="container">
+                    <!-- Display User Settings -->
+
+                </div>
         </div>
         </div>  
       <!-- Nav Bar -->

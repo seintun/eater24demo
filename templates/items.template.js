@@ -24,19 +24,3 @@ const templateItem = (item) => {
             </div>
         </div>`;
 }
-
-// <div class="row">
-// <div class="col-3">
-//     <img src="https://source.unsplash.com/200x200/?food" alt="">
-// </div>
-// <div class="col-9 float-right">
-//     <li id= "${item.id}" class="list-group-item m-1">
-//         <h4>Black Cod</h4>
-//         <small>Saskatchewan chanterelles, sunflower seed fat, spinach</small>
-//         <br />
-//         <strong>$27</strong>
-//         <br />
-//         <em>Allergens: Seafood</em>
-//     </li>
-// </div>
-// </div>

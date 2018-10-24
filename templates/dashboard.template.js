@@ -7,7 +7,6 @@ const templateOrders = (orders) => {
 }
 
 const templateOrder = (order, idx) => {
-    console.log(order)
     return `
     <div id="accordion">
         <div class="card">
@@ -33,3 +32,35 @@ const templateOrder = (order, idx) => {
             `;
 
 }
+
+const displayTemplateSettings = () => {
+    const userName = JSON.parse(localStorage.getItem("user")).name
+    const userId = JSON.parse(localStorage.getItem("user")).userId
+    const email = JSON.parse(localStorage.getItem("user")).email
+    return `                    
+    <form>
+        <div class="form">
+            <div class="form-group">
+                <label for="nameInput">Name</label>
+                <input type="text" class="form-control" id="nameInput" value="${userName}">
+            </div>              
+            <div class="form-group">
+                <label for="nameInput">Name</label>
+                <input type="text" class="form-control" id="userIdInput" value="${userId}">
+            </div>    
+            <div class="form-group">
+                <label for="passwordInput">Password</label>
+                <input type="password" class="form-control" id="passwordInput" placeholder="Enter your Password">
+            </div>
+            <div class="form-group">
+                <label for="emailInput">Email</label>
+                <input type="email" class="form-control" id="emailInput" value="${email}">
+            </div>
+        </div>
+        <button onclick="sendUserInfoUpdate()" type="button" class="btn btn-primary">
+            Update Changes
+        </button>
+    </form>`
+}
+
+
