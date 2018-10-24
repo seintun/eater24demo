@@ -10,9 +10,9 @@ body {
 .notRegistered:hover {
     color: orange;
 }
-.btn {
+/* .btn {
     background-color: snow;
-}
+} */
 #user-alert {
     display: none;
 }

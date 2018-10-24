@@ -10,14 +10,3 @@ const displayItems = (restaurantId=1) => {
             return 'error in retrieving restaurants data'
         }) 
 }
-
-// const pickId = () => {
-//     document.querySelector(".carousel-caption")
-//             .addEventListener("click",function(e) {
-//                 // e.target is our targetted element
-//                 if(e.target.nodeName == "LI") {
-//                     displayItems(e)
-//                     console.log(e, 'eventlistener');
-//                 }
-//     })
-// }
