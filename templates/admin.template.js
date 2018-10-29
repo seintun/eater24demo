@@ -27,6 +27,7 @@ const templateCustomerOrder = (order, idx) => {
     </div>`
 
 }
+document.addEventListener('DOMContentLoaded', templateCustomerOrders())
 
 // `
 //     <div id="accordion">
